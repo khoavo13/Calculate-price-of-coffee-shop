@@ -11,11 +11,11 @@ function calculatePrice1(drinkType, size, whippedCream) {
         basePrice += 0.5;
     } else if (size === 'L') {
         if (drinkType === 'cold' || drinkType === 'blended') {
-        basePrice += 1;
+            basePrice += 1;
         } else {
-        // L size is only available for cold and blended drinks
-        console.error('L size is not available for this drink type.');
-        return null;
+            // L size is only available for cold and blended drinks
+            console.error('L size is not available for this drink type.');
+            return null;
         }
     }
 
