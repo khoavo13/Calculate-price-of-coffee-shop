@@ -14,7 +14,7 @@ function calculatePrice1(drinkType, size, whippedCream) {
         basePrice += 1;
         } else {
         // L size is only available for cold and blended drinks
-        console.log('L size is not available for this drink type.');
+        console.error('L size is not available for this drink type.');
         return null;
         }
     }
@@ -46,7 +46,7 @@ function calculatePrice2(drinkType, size, whippedCream) {
         basePrice += 1;
         } else {
             // L size is only available for cold and blended drinks
-            console.log('L size is not available for this drink type.');
+            console.error('L size is not available for this drink type.');
             return null;
         }
     }
@@ -71,20 +71,6 @@ function calculatePrice3(drinkType, size, whippedCream, chocolateSaucePumps) {
     }
     else if (drinkType === 'milk tea'){
         basePrice = 2.25;
-    }
-
-    // Check the chocolate sauce pumps
-    if (drinkType === 'hot') {
-        if (chocolateSaucePumps > 6){
-            console.error("Only be added to a maximum of 6 pumps.");
-            return null;
-        }
-        else if (chocolateSaucePumps > 2){
-            basePrice += (chocolateSaucePumps - 2) * 0.5;
-        } 
-    } else if (chocolateSaucePumps > 0) {
-        console.error("Chocolate sauce can only be added to hot drinks.");
-        return null;
     }
 
     // Adjust price based on size
@@ -135,20 +121,6 @@ function calculatePrice4(drinkType, size, whippedCream, chocolateSaucePumps, bre
     }
     else if (drinkType === 'milk tea'){
         basePrice = 2.25;
-    }
-
-    // Check the chocolate sauce pumps
-    if (drinkType === 'hot') {
-        if (chocolateSaucePumps > 6){
-            console.error("Only be added to a maximum of 6 pumps.");
-            return null;
-        }
-        else if (chocolateSaucePumps > 2){
-            basePrice += (chocolateSaucePumps - 2) * 0.5;
-        } 
-    } else if (chocolateSaucePumps > 0) {
-        console.error("Chocolate sauce can only be added to hot drinks.");
-        return null;
     }
 
     // Adjust price based on size
